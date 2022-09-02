@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+    name: backend-service
+spec:
+    selector:
+        app: webapp
+        tier: backend
+    type: NodePort
+    ports:
+    - port: 80
+      name: backend
+      protocol: TCP
+      targetPort: 8080
